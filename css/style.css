@@ -1,0 +1,332 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primary-color: #0d0d0d;
+  --secondary-color: #e55039;
+  --off-black-color: #2c2c54;
+  --white-color: #ffffff;
+}
+
+body {
+  height: 100vh;
+  background-color: var(--primary-color);
+  font-family: sans-serif;
+}
+header .container {
+  background-color: var(--primary-color);
+}
+
+[alt='brand-logo'] {
+  height: 40px;
+  filter: grayscale(100%) brightness(40%) sepia(100%) hue-rotate(-50deg)
+    saturate(600%) contrast(1);
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 100px;
+}
+nav ul {
+  color: var(--white-color);
+  list-style-type: none;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 600px;
+}
+nav .list-items .list-item {
+  cursor: pointer;
+}
+nav .list-items .list-item:hover {
+  color: var(--secondary-color);
+}
+
+/* intro Section starts from here */
+
+section .container {
+  padding: 0px 150px;
+  display: flex;
+  gap: 30px;
+}
+.intro .container img {
+  width: 500px;
+}
+.text-box {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.text-box .title {
+  color: var(--secondary-color);
+  font-size: 20px;
+  padding-bottom: 5px;
+}
+.text-box .role {
+  font-size: 40px;
+  padding-bottom: 5px;
+  color: var(--white-color);
+}
+.text-box .bio {
+  opacity: 0.8;
+  padding-bottom: 30px;
+}
+.text-box .primary-btn {
+  background-color: var(--secondary-color);
+  padding: 10px;
+  margin-right: 500px;
+  color: var(--white-color);
+  cursor: pointer;
+  font-size: 20px;
+}
+
+#sec-nav .nav-items {
+  position: relative;
+  left: 400px;
+}
+.nav-items .nav-item:hover {
+  cursor: pointer;
+  filter: grayscale(100%) brightness(40%) sepia(100%) hue-rotate(-50deg)
+    saturate(600%) contrast(1);
+}
+/* ---work showcase starts from here */
+
+.card-group {
+  display: flex;
+  padding: 25px 150px;
+  gap: 50px;
+}
+.card-group .card {
+  color: white;
+  width: 350px;
+  height: 250px;
+  padding: 30px 50px;
+}
+.card img {
+  width: 40px;
+  margin-bottom: 10px;
+}
+.card h2 {
+  margin-bottom: 10px;
+}
+
+.card p {
+  margin-bottom: 10px;
+}
+
+.card a {
+  color: white;
+  text-decoration: none;
+}
+
+.card-group .card:hover {
+  cursor: pointer;
+  background-color: var(--secondary-color);
+  opacity: 0.9;
+}
+
+/* ----------- work showcase ends from here */
+
+/*----------- Featured projects starts from here ----->*/
+
+.project-title {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 120px;
+  align-items: center;
+}
+
+.project-title .title h1 {
+  padding-bottom: 20px;
+  font-size: 40px;
+}
+.project-title .title p {
+  color: grey;
+  opacity: 0.5px;
+}
+.primaryBtn {
+  width: 200px;
+  height: 100px;
+  text-align: center;
+  padding: 25px;
+}
+.primaryBtn .primary-Btn {
+  font-size: 20px;
+  width: 150px;
+  height: 50px;
+  background-color: var(--secondary-color);
+  color: white;
+  cursor: pointer;
+}
+/* Featured projects ends here------ */
+
+/* -----------------Projects section starts from here------> */
+.projects-wrapper {
+  padding-left: 120px;
+  padding-right: 120px;
+}
+
+.project-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.project-cards .project-card {
+  height: 560px;
+  margin-bottom: 10px;
+}
+.project-cards .project-card img {
+  padding: 80px 30px;
+  background-color: var(--off-black-color);
+  width: 620px;
+}
+.project-cards h2 {
+  color: var(--white-color);
+  margin: 10px auto;
+}
+.project-cards a {
+  text-decoration: none;
+  color: var(--secondary-color);
+}
+
+/* TODO: */
+/* Project Section ends here */
+
+/* experience starts from here-----------> */
+
+.experience {
+  color: var(--white-color);
+  padding: 50px 150px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.experience > .left-exp-col {
+  font-size: 25px;
+  font-weight: 600;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 35px;
+  width: 400px;
+  position: relative;
+  bottom: -10px;
+}
+
+.left-exp-col p > .red-text {
+  color: red;
+}
+.left-exp-col .lg-text-1 {
+  font-size: 100px;
+  font-weight: 800;
+}
+
+.right-exp-col {
+  display: flex;
+  width: 730px;
+  gap: 15px;
+  height: 250px;
+  padding: 10px 10px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: relative;
+  right: 80px;
+  top: 20px;
+}
+
+.right-exp-col .sm-card {
+  padding: 10px;
+  text-align: center;
+  background-color: var(--off-black-color);
+  width: 300px;
+  height: 100px;
+}
+.right-exp-col .sm-card .red-text {
+  color: var(--secondary-color);
+  font-size: 30px;
+  font-weight: 800;
+}
+.sm-card p .sm-text-2 {
+  position: relative;
+  top: 10px;
+}
+
+/* experience ends from here */
+
+/* Working section starts from here ------------*/
+.working-section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 300px;
+  margin-top: 20px;
+  background-color: var(--off-black-color);
+}
+
+.offer {
+  color: var(--white-color);
+}
+.offer h2 {
+  padding-bottom: 20px;
+  font-size: 50px;
+  width: 500px;
+}
+.offer p {
+  width: 500px;
+  color: whitesmoke;
+  opacity: 0.5;
+}
+.btn-working button {
+  width: 110px;
+  cursor: pointer;
+  height: 30px;
+  font-size: 16px;
+  color: white;
+  background-color: var(--secondary-color);
+  border: transparent;
+}
+
+/* -------------Footer starts from here */
+footer {
+  background-color: var(--off-black-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0px;
+  padding-right: 100px;
+  padding-left: 100px;
+}
+footer .socials {
+  width: 140px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  right: 500px;
+}
+[alt='facebook'] {
+  cursor: pointer;
+}
+[alt='facebook']:hover {
+  filter: grayscale(100%) brightness(40%) sepia(100%) hue-rotate(-50deg)
+    saturate(600%) contrast(1);
+}
+[alt='twitter'] {
+  cursor: pointer;
+}
+[alt='twitter']:hover {
+  filter: grayscale(100%) brightness(40%) sepia(100%) hue-rotate(-50deg)
+    saturate(600%) contrast(1);
+}
+
+[alt='youtube'] {
+  cursor: pointer;
+}
+[alt='youtube']:hover {
+  filter: grayscale(100%) brightness(40%) sepia(100%) hue-rotate(-50deg)
+    saturate(600%) contrast(1);
+}
