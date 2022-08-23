@@ -15,6 +15,9 @@ body {
   background-color: var(--primary-color);
   font-family: sans-serif;
 }
+
+/* =========== Header container starts from here =========== */
+
 header .container {
   background-color: var(--primary-color);
 }
@@ -24,11 +27,24 @@ header .container {
   filter: grayscale(100%) brightness(40%) sepia(100%) hue-rotate(-50deg)
     saturate(600%) contrast(1);
 }
+
 nav {
   display: flex;
   justify-content: space-between;
   padding: 30px 100px;
 }
+
+@media (max-width: 660px) {
+  #navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  nav img {
+    width: 150px;
+  }
+}
+
 nav ul {
   color: var(--white-color);
   list-style-type: none;
@@ -43,46 +59,6 @@ nav .list-items .list-item {
 nav .list-items .list-item:hover {
   color: var(--secondary-color);
 }
-
-/* intro Section starts from here */
-
-section .container {
-  padding: 0px 150px;
-  display: flex;
-  gap: 30px;
-}
-.intro .container img {
-  width: 500px;
-}
-.text-box {
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.text-box .title {
-  color: var(--secondary-color);
-  font-size: 20px;
-  padding-bottom: 5px;
-}
-.text-box .role {
-  font-size: 40px;
-  padding-bottom: 5px;
-  color: var(--white-color);
-}
-.text-box .bio {
-  opacity: 0.8;
-  padding-bottom: 30px;
-}
-.text-box .primary-btn {
-  background-color: var(--secondary-color);
-  padding: 10px;
-  margin-right: 500px;
-  color: var(--white-color);
-  cursor: pointer;
-  font-size: 20px;
-}
-
 #sec-nav .nav-items {
   position: relative;
   left: 400px;
@@ -92,23 +68,92 @@ section .container {
   filter: grayscale(100%) brightness(40%) sepia(100%) hue-rotate(-50deg)
     saturate(600%) contrast(1);
 }
-/* ---work showcase starts from here */
+
+/*========= Intro Section starts from here ===================*/
+
+section .container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-right: 2rem;
+}
+.intro [alt='model'] {
+  height: 500px;
+}
+.container .text-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 600px;
+}
+.intro [alt='model'] {
+  height: 500px;
+}
+
+.container .title {
+  color: #c91b28;
+  font-weight: 800;
+}
+
+.intro .role {
+  font-size: 4em;
+  margin: 10px 0;
+  font-weight: 700;
+  text-transform: capitalize;
+  color: white;
+}
+
+.intro p {
+  color: white;
+  line-height: 1.5em;
+}
+
+.primary-btn {
+  background-color: #c91b28;
+  padding: 0.8em 1.5em;
+  width: fit-content;
+  margin: 40px 0;
+  font-family: inherit;
+  text-transform: uppercase;
+  color: #ffffff;
+  border: none;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+@media (max-width: 800px) {
+  section .container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+  }
+}
+
+/* --- ============== Card showcase starts from here =============*/
+
+.works {
+  background: linear-gradient(
+    to right,
+    #181818,
+    #181818 50%,
+    transparent 50%,
+    transparent
+  );
+}
 
 .card-group {
   display: flex;
-  padding: 25px 150px;
-  gap: 50px;
+  padding: 5rem;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
 }
-.card-group .card {
+.card {
   color: white;
   width: 350px;
-  height: 250px;
   padding: 30px 50px;
 }
-.card img {
-  width: 40px;
-  margin-bottom: 10px;
-}
+
 .card h2 {
   margin-bottom: 10px;
 }
@@ -128,7 +173,7 @@ section .container {
   opacity: 0.9;
 }
 
-/* ----------- work showcase ends from here */
+/* ----------- work showcase ends from here =============== */
 
 /*----------- Featured projects starts from here ----->*/
 
@@ -165,6 +210,7 @@ section .container {
 /* Featured projects ends here------ */
 
 /* -----------------Projects section starts from here------> */
+
 .projects-wrapper {
   padding-left: 120px;
   padding-right: 120px;
@@ -193,7 +239,6 @@ section .container {
   color: var(--secondary-color);
 }
 
-/* TODO: */
 /* Project Section ends here */
 
 /* experience starts from here-----------> */
@@ -202,7 +247,8 @@ section .container {
   color: var(--white-color);
   padding: 50px 150px;
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .experience > .left-exp-col {
@@ -211,11 +257,10 @@ section .container {
   text-align: center;
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
   padding-bottom: 35px;
   width: 400px;
-  position: relative;
-  bottom: -10px;
 }
 
 .left-exp-col p > .red-text {
@@ -230,13 +275,9 @@ section .container {
   display: flex;
   width: 730px;
   gap: 15px;
-  height: 250px;
   padding: 10px 10px;
   justify-content: space-between;
   flex-wrap: wrap;
-  position: relative;
-  right: 80px;
-  top: 20px;
 }
 
 .right-exp-col .sm-card {
@@ -259,57 +300,67 @@ section .container {
 /* experience ends from here */
 
 /* Working section starts from here ------------*/
+
 .working-section {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  height: 300px;
-  margin-top: 20px;
+  padding: 1.5rem 0.4rem;
   background-color: var(--off-black-color);
 }
 
 .offer {
+  margin-left: 1rem;
   color: var(--white-color);
 }
 .offer h2 {
   padding-bottom: 20px;
   font-size: 50px;
-  width: 500px;
 }
 .offer p {
-  width: 500px;
   color: whitesmoke;
   opacity: 0.5;
 }
+
 .btn-working button {
-  width: 110px;
   cursor: pointer;
-  height: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 50px;
+  padding-right: 50px;
+  text-align: center;
   font-size: 16px;
   color: white;
   background-color: var(--secondary-color);
   border: transparent;
+  margin-right: 15rem;
 }
 
-/* -------------Footer starts from here */
+/* ========= secondary  navigation starts from here ============ */
+
+#sec-nav {
+  display: flex;
+  justify-content: space-around;
+  padding-left: 50px 50px;
+}
+
+/* -------------Footer starts from here ======================== */
+
 footer {
   background-color: var(--off-black-color);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 30px 0px;
-  padding-right: 100px;
-  padding-left: 100px;
+  padding: 3rem 8rem;
 }
 footer .socials {
-  width: 140px;
   display: flex;
-  justify-content: space-between;
-  position: relative;
-  right: 500px;
+  padding-right: 25rem;
+  gap: 2rem;
 }
 [alt='facebook'] {
   cursor: pointer;
+  padding-left: 1rem;
 }
 [alt='facebook']:hover {
   filter: grayscale(100%) brightness(40%) sepia(100%) hue-rotate(-50deg)
